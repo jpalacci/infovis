@@ -191,7 +191,127 @@
       <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
       <column-instance column='[Calculation_729231323707666433]' derivation='Sum' name='[sum:Calculation_729231323707666433:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
-      <layout dim-ordering='alphabetic' dim-percentage='0.515982' measure-ordering='alphabetic' measure-percentage='0.484018' show-structure='true' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='es_ES' class='hyper' dbname='/Users/Julian/infovis/week10/datos_extraidos.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='03/15/2020 11:40:08 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='Hoja1 (datos)' increment-value='%null%' refresh-type='create' rows-inserted='12600' timestamp-start='2020-03-15 23:40:08.452' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>RecordID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[RecordID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>RecordID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Hoja1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>618</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Country</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Hoja1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>70</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RAR_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Gender</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Hoja1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RAR_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Demographics Question</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Demographics Question]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Demographics Question</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Hoja1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RAR_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Demographics Response</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Demographics Response]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Demographics Response</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Hoja1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RAR_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Question</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Question]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Question</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Hoja1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RAR_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Survey Year</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Survey Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Survey Year</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Hoja1</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Value</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Value]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Value</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Hoja1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>927</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RAR_S2' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.549087' measure-ordering='alphabetic' measure-percentage='0.450913' show-structure='true' />
       <style>
         <style-rule element='mark'>
           <encoding attr='color' field='[:Measure Names]' type='palette'>
@@ -532,8 +652,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='53' type='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='52' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='100000' id='55' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='54' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
                 <zone fixed-size='96' h='13000' id='17' is-fixed='true' is-scaled='1' param='/Users/Julian/infovis/week10/fistula.png' type='bitmap' w='17100' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -720,7 +840,7 @@
         </viewpoint>
         <viewpoint name='by Question and Gender' />
       </viewpoints>
-      <active id='8' />
+      <active id='-1' />
       <simple-id uuid='{7206E053-B420-42BE-A867-38BBEFF471A1}' />
     </window>
   </windows>
